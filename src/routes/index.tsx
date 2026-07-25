@@ -277,7 +277,7 @@ function Trust() {
 function About() {
   return (
     <Section id="sobre-mi">
-      <div className="grid items-center gap-14 lg:grid-cols-[1.1fr,1fr]">
+      <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_1fr]">
         <motion.div {...fadeUp()}>
           <Eyebrow>Sobre mí</Eyebrow>
           <h2 className="font-display text-4xl leading-[1.05] tracking-tight text-gradient md:text-6xl">
@@ -804,7 +804,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 function Faq() {
   return (
     <Section id="faq">
-      <div className="grid gap-14 lg:grid-cols-[1fr,1.4fr]">
+      <div className="grid gap-14 lg:grid-cols-[1fr_1.4fr]">
         <motion.div {...fadeUp()}>
           <Eyebrow>Preguntas frecuentes</Eyebrow>
           <h2 className="font-display text-4xl leading-[1.05] tracking-tight text-gradient md:text-5xl">
@@ -837,7 +837,7 @@ function Contact() {
           <div className="absolute inset-0 bg-grid opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
         </div>
 
-        <div className="grid gap-12 lg:grid-cols-[1.1fr,1fr]">
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr]">
           <motion.div {...fadeUp()}>
             <Eyebrow>Hablemos</Eyebrow>
             <h2 className="font-display text-5xl leading-[1.02] tracking-tight text-gradient md:text-7xl">
