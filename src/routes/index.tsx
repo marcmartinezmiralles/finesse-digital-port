@@ -449,7 +449,7 @@ const PROJECTS = [
   },
   {
     img: projSports,
-    name: "CF Montgat",
+    name: "CF Exemple",
     category: "Club deportivo",
     desc: "Portal para socios con calendario, plantilla y partidos en directo.",
     tags: ["Portal", "Calendario", "Contenido"],
