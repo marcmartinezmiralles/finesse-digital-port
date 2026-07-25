@@ -21,7 +21,6 @@ import {
   MessageSquare,
   Mail,
   Linkedin,
-  Star,
   Send,
   Plus,
   Minus,
@@ -109,7 +108,6 @@ const NAV = [
   { href: "#servicios", label: "Servicios" },
   { href: "#proyectos", label: "Proyectos" },
   { href: "#proceso", label: "Proceso" },
-  { href: "#testimonios", label: "Testimonios" },
   { href: "#faq", label: "FAQ" },
 ];
 
@@ -171,7 +169,7 @@ function Hero() {
 
       <motion.div
         style={{ y, opacity }}
-        className="mx-auto flex max-w-5xl flex-col items-center px-6 pb-24 pt-8 text-center md:pt-16"
+        className="mx-auto flex max-w-5xl flex-col items-center px-6 pb-24 pt-4 text-center md:pt-10"
       >
         <motion.div {...fadeUp(0)}>
           <Eyebrow>Disponible para nuevos proyectos · 2026</Eyebrow>
@@ -179,7 +177,7 @@ function Hero() {
 
         <motion.h1
           {...fadeUp(0.05)}
-          className="text-balance font-display text-5xl leading-[1.02] tracking-tight text-gradient sm:text-6xl md:text-[88px]"
+          className="text-balance font-display text-5xl leading-[1.12] tracking-tight text-gradient sm:text-6xl md:text-[88px]"
         >
           Webs modernas que
           <br />
@@ -216,22 +214,18 @@ function Hero() {
           className="mt-14 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground"
         >
           <div className="flex items-center gap-1.5">
-            <div className="flex -space-x-1">
-              {[1, 2, 3, 4].map((i) => (
-                <div
-                  key={i}
-                  className="size-6 rounded-full border-2 border-background bg-gradient-to-br from-primary to-primary-glow"
-                />
-              ))}
-            </div>
-            <span>+20 negocios ya confían en mi trabajo</span>
+            <Check className="size-4 text-primary" strokeWidth={2.5} />
+            <span>Presupuesto cerrado desde el primer día</span>
           </div>
           <div className="hidden h-3 w-px bg-border md:block" />
-          <div className="flex items-center gap-1">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="size-3.5 fill-primary text-primary" />
-            ))}
-            <span className="ml-1">Valoración media 5.0</span>
+          <div className="flex items-center gap-1.5">
+            <Zap className="size-4 text-primary" strokeWidth={2.5} />
+            <span>Respuesta en menos de 24h</span>
+          </div>
+          <div className="hidden h-3 w-px bg-border md:block" />
+          <div className="flex items-center gap-1.5">
+            <MessageSquare className="size-4 text-primary" strokeWidth={2.5} />
+            <span>Trato directo conmigo, sin intermediarios</span>
           </div>
         </motion.div>
       </motion.div>
@@ -299,15 +293,15 @@ function About() {
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-3 gap-6">
+          <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
-              { k: "+20", v: "Proyectos entregados" },
-              { k: "98", v: "Puntuación Lighthouse" },
-              { k: "24h", v: "Respuesta media" },
+              { k: "Formación", v: "Ingeniería de Sistemas TIC" },
+              { k: "Stack", v: "React · Tailwind · Cloudflare" },
+              { k: "Dedicación", v: "100 % personal, sin subcontratas" },
             ].map((s) => (
-              <div key={s.v}>
-                <div className="font-display text-4xl text-gradient-primary md:text-5xl">{s.k}</div>
-                <div className="mt-1 text-xs text-muted-foreground">{s.v}</div>
+              <div key={s.k} className="rounded-xl border border-border/60 bg-surface/40 p-4">
+                <div className="text-xs font-medium text-muted-foreground">{s.k}</div>
+                <div className="mt-1 text-sm font-semibold text-foreground">{s.v}</div>
               </div>
             ))}
           </div>
@@ -467,17 +461,21 @@ function Projects() {
     <Section id="proyectos">
       <div className="flex flex-wrap items-end justify-between gap-6">
         <motion.div {...fadeUp()} className="max-w-2xl">
-          <Eyebrow>Proyectos destacados</Eyebrow>
+          <Eyebrow>Ejemplos conceptuales</Eyebrow>
           <h2 className="font-display text-4xl leading-[1.05] tracking-tight text-gradient md:text-6xl">
-            Trabajo reciente <span className="italic text-gradient-primary">que convierte</span>.
+            Así <span className="italic text-gradient-primary">podría verse</span> tu web.
           </h2>
+          <p className="mt-4 text-muted-foreground">
+            Diseños conceptuales pensados para distintos sectores, no clientes reales: una muestra
+            de lo que puedo construir para tu negocio.
+          </p>
         </motion.div>
         <motion.a
           {...fadeUp(0.1)}
           href="#contacto"
           className="group inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
         >
-          ¿Quieres ser el próximo?
+          ¿Quieres algo así para tu negocio?
           <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
         </motion.a>
       </div>
@@ -506,7 +504,7 @@ function Projects() {
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-70 transition-opacity group-hover:opacity-90" />
               <div className="absolute left-4 top-4">
                 <span className="rounded-full border border-white/15 bg-black/40 px-3 py-1 text-xs font-medium text-white backdrop-blur-md">
-                  {p.category}
+                  Concepto · {p.category}
                 </span>
               </div>
             </div>
@@ -657,97 +655,12 @@ function Process() {
   );
 }
 
-// ---------- Testimonials ----------
-
-const TESTIMONIALS = [
-  {
-    quote:
-      "Marc rediseñó la web de mi clínica y las reservas online se han multiplicado por tres en dos meses. Trato impecable y muy rápido en todo.",
-    name: "Dra. Elena Ruiz",
-    role: "Clínica Dental Sant Cugat",
-  },
-  {
-    quote:
-      "Nos entregó una landing preciosa para el lanzamiento de nuestro box. Rápida, moderna y con formulario de leads que funciona a la perfección.",
-    name: "Iván Peris",
-    role: "IronCore Studio",
-  },
-  {
-    quote:
-      "Buscábamos una web que transmitiera lujo y confianza. Marc lo clavó. Además nos ayudó con el dominio y el hosting, todo listo en 3 semanas.",
-    name: "Marta Bosch",
-    role: "Casa Nova Inmobiliaria",
-  },
-  {
-    quote:
-      "Profesional, atento y muy detallista. La web carga en menos de un segundo y en Google salimos los primeros por nuestra zona.",
-    name: "Jordi Aymerich",
-    role: "Osteria Milano",
-  },
-  {
-    quote:
-      "Tenía miedo de que fuera complicado. Marc me lo explicó todo con calma y ahora gestiono los cambios yo mismo. Recomendadísimo.",
-    name: "Sergio López",
-    role: "Odín Barbershop",
-  },
-  {
-    quote:
-      "Renovó por completo la web del club. Los socios están encantados y se nota la calidad. Un lujo trabajar con él.",
-    name: "Anna Vidal",
-    role: "CF Montgat",
-  },
-];
-
-function Testimonials() {
-  return (
-    <Section id="testimonios">
-      <motion.div {...fadeUp()} className="max-w-3xl">
-        <Eyebrow>Testimonios</Eyebrow>
-        <h2 className="font-display text-4xl leading-[1.05] tracking-tight text-gradient md:text-6xl">
-          Historias de <span className="italic text-gradient-primary">clientes contentos</span>.
-        </h2>
-      </motion.div>
-
-      <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {TESTIMONIALS.map((t, i) => (
-          <motion.figure
-            key={t.name}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55, delay: (i % 3) * 0.06 }}
-            className="glass flex h-full flex-col rounded-2xl p-6 transition-colors hover:border-primary/30"
-          >
-            <div className="flex gap-1">
-              {[...Array(5)].map((_, k) => (
-                <Star key={k} className="size-4 fill-primary text-primary" />
-              ))}
-            </div>
-            <blockquote className="mt-4 flex-1 text-[15px] leading-relaxed text-foreground/90">
-              "{t.quote}"
-            </blockquote>
-            <figcaption className="mt-6 flex items-center gap-3 border-t border-border/60 pt-4">
-              <div className="grid size-10 place-items-center rounded-full bg-gradient-to-br from-primary to-primary-glow text-sm font-semibold text-primary-foreground">
-                {t.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
-              </div>
-              <div className="min-w-0">
-                <div className="truncate text-sm font-semibold">{t.name}</div>
-                <div className="truncate text-xs text-muted-foreground">{t.role}</div>
-              </div>
-            </figcaption>
-          </motion.figure>
-        ))}
-      </div>
-    </Section>
-  );
-}
-
 // ---------- FAQ ----------
 
 const FAQ = [
   {
     q: "¿Cuánto cuesta una web contigo?",
-    a: "Depende del alcance, pero la mayoría de mis proyectos se sitúan entre 500 € y 2.000 €. Trabajo con presupuesto cerrado: sabrás el precio final antes de empezar, sin sorpresas.",
+    a: "Depende del alcance, pero la mayoría de mis proyectos se sitúan entre 100 € y 400 €. Trabajo con presupuesto cerrado: sabrás el precio final antes de empezar, sin sorpresas.",
   },
   {
     q: "¿En cuánto tiempo estará lista?",
@@ -850,7 +763,7 @@ function Contact() {
 
             <div className="mt-10 space-y-3">
               <a
-                href="https://wa.me/34600000000"
+                href="https://wa.me/34600293219"
                 target="_blank"
                 rel="noreferrer"
                 className="group flex items-center justify-between gap-4 rounded-2xl border border-border/60 bg-surface/60 p-4 transition-all hover:border-primary/40 hover:bg-surface"
@@ -867,7 +780,7 @@ function Contact() {
                 <ArrowUpRight className="size-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
               <a
-                href="mailto:hola@marcmartinez.dev"
+                href="mailto:marcmartinez511@gmail.com"
                 className="group flex items-center justify-between gap-4 rounded-2xl border border-border/60 bg-surface/60 p-4 transition-all hover:border-primary/40 hover:bg-surface"
               >
                 <div className="flex items-center gap-4">
@@ -875,14 +788,14 @@ function Contact() {
                     <Mail className="size-5" strokeWidth={1.75} />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold">hola@marcmartinez.dev</div>
+                    <div className="text-sm font-semibold">marcmartinez511@gmail.com</div>
                     <div className="text-xs text-muted-foreground">Correo electrónico</div>
                   </div>
                 </div>
                 <ArrowUpRight className="size-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/marc-mart%C3%ADnez-miralles-9b83a3354/"
                 target="_blank"
                 rel="noreferrer"
                 className="group flex items-center justify-between gap-4 rounded-2xl border border-border/60 bg-surface/60 p-4 transition-all hover:border-primary/40 hover:bg-surface"
@@ -1033,7 +946,6 @@ function Index() {
       <Projects />
       <WhyMe />
       <Process />
-      <Testimonials />
       <Faq />
       <Contact />
       <Footer />

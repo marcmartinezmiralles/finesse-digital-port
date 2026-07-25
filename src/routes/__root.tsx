@@ -111,7 +111,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             "Cloudflare",
             "Landing pages",
           ],
-          sameAs: ["https://www.linkedin.com/"],
+          sameAs: ["https://www.linkedin.com/in/marc-mart%C3%ADnez-miralles-9b83a3354/"],
         }),
       },
     ],
