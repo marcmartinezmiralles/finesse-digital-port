@@ -489,7 +489,7 @@ function Projects() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: (i % 2) * 0.08 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as any, delay: (i % 2) * 0.08 }}
             className={`group relative overflow-hidden rounded-3xl border border-border/60 bg-surface/40 p-3 backdrop-blur-md transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-elegant ${
               i === 4 ? "md:col-span-2" : ""
             }`}
@@ -792,7 +792,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
       <motion.div
         initial={false}
         animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
-        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] as any }}
         className="overflow-hidden"
       >
         <p className="pb-6 pr-12 text-muted-foreground">{a}</p>
