@@ -30,7 +30,6 @@ import {
   Sparkle,
 } from "lucide-react";
 
-import portrait from "../assets/portrait.jpg";
 import projRestaurant from "../assets/project-restaurant.jpg";
 import projGym from "../assets/project-gym.jpg";
 import projRealEstate from "../assets/project-realestate.jpg";
@@ -263,75 +262,6 @@ function Trust() {
         ))}
       </div>
     </section>
-  );
-}
-
-// ---------- About ----------
-
-function About() {
-  return (
-    <Section id="sobre-mi">
-      <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_1fr]">
-        <motion.div {...fadeUp()}>
-          <Eyebrow>Sobre mí</Eyebrow>
-          <h2 className="font-display text-4xl leading-[1.05] tracking-tight text-gradient md:text-6xl">
-            Soy Marc. Diseño webs que <span className="italic text-gradient-primary">venden</span>.
-          </h2>
-          <div className="mt-8 space-y-5 text-lg leading-relaxed text-muted-foreground">
-            <p>
-              Estudiante de Ingeniería de Sistemas y apasionado por la tecnología desde muy joven.
-              Me he especializado en crear webs modernas para pequeños negocios y profesionales que
-              quieren dar un salto de calidad en su imagen digital.
-            </p>
-            <p>
-              Trabajo combinando diseño cuidado, código limpio y las últimas herramientas de IA para
-              entregar proyectos rápido y con calidad profesional — sin renunciar al trato cercano.
-            </p>
-            <p>
-              Mi obsesión: rendimiento, experiencia de usuario y resultados medibles. Una web bonita
-              no basta; tiene que hacer sonar el teléfono.
-            </p>
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
-            {[
-              { k: "Formación", v: "Ingeniería de Sistemas TIC" },
-              { k: "Stack", v: "React · Tailwind · Cloudflare" },
-              { k: "Dedicación", v: "100 % personal, sin subcontratas" },
-            ].map((s) => (
-              <div key={s.k} className="rounded-xl border border-border/60 bg-surface/40 p-4">
-                <div className="text-xs font-medium text-muted-foreground">{s.k}</div>
-                <div className="mt-1 text-sm font-semibold text-foreground">{s.v}</div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div {...fadeUp(0.1)} className="relative">
-          <div className="absolute -inset-8 -z-10 bg-hero-glow opacity-70 blur-2xl" />
-          <div className="glass-strong relative overflow-hidden rounded-3xl p-2 shadow-elegant">
-            <img
-              src={portrait}
-              alt="Retrato de Marc Martínez, desarrollador web freelance"
-              width={1024}
-              height={1280}
-              loading="lazy"
-              className="aspect-[4/5] w-full rounded-2xl object-cover"
-            />
-            <div className="absolute inset-x-4 bottom-4 flex items-center justify-between rounded-2xl border border-white/10 bg-black/40 px-4 py-3 backdrop-blur-xl">
-              <div>
-                <div className="text-sm font-medium">Marc Martínez</div>
-                <div className="text-xs text-muted-foreground">Freelance · Barcelona</div>
-              </div>
-              <div className="flex items-center gap-1.5 rounded-full bg-primary/15 px-2.5 py-1 text-xs font-medium text-primary">
-                <span className="size-1.5 animate-pulse rounded-full bg-primary" />
-                Disponible
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </Section>
   );
 }
 
@@ -941,7 +871,6 @@ function Index() {
       <Nav />
       <Hero />
       <Trust />
-      <About />
       <Services />
       <Projects />
       <WhyMe />
