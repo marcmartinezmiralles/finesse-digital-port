@@ -379,7 +379,7 @@ const PROJECTS = [
   },
   {
     img: projSports,
-    name: "Club de Futbol Ejemplo",
+    name: "Club de Fútbol Ejemplo",
     category: "Club deportivo",
     desc: "Portal para socios con calendario, plantilla y partidos en directo.",
     tags: ["Portal", "Calendario", "Contenido"],
