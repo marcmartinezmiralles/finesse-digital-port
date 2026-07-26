@@ -590,11 +590,11 @@ function Process() {
 const FAQ = [
   {
     q: "¿Cuánto cuesta una web contigo?",
-    a: "Depende del alcance, pero la mayoría de mis proyectos se sitúan entre 100 € y 400 €. Trabajo con presupuesto cerrado: sabrás el precio final antes de empezar, sin sorpresas.",
+    a: "Depende del alcance, pero la mayoría de mis proyectos se sitúan entre 100 € y 300 €. Trabajo con presupuesto cerrado: sabrás el precio final antes de empezar, sin sorpresas.",
   },
   {
     q: "¿En cuánto tiempo estará lista?",
-    a: "Una landing suele estar lista en 1–2 semanas. Una web corporativa completa entre 2 y 4 semanas desde la aprobación del diseño.",
+    a: "Una landing suele estar lista en 1–2 semanas desde la aprobación del diseño.",
   },
   {
     q: "¿La web es mía?",
@@ -606,11 +606,11 @@ const FAQ = [
   },
   {
     q: "¿Dónde se aloja la web?",
-    a: "Uso Cloudflare por su velocidad global, CDN incluido y protección de seguridad. Recomendaría la solución más adecuada a tu caso.",
+    a: "Uso Cloudflare por su velocidad global y protección de seguridad. Recomendaría la solución más adecuada a tu caso.",
   },
   {
     q: "¿Ofreces mantenimiento?",
-    a: "Sí. Ofrezco planes mensuales que incluyen cambios de contenido, actualizaciones y monitorización. Sin permanencia.",
+    a: "Sí, ofrezco mantenimiento de la web.",
   },
   {
     q: "¿Puedo pedir cambios después del lanzamiento?",
