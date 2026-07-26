@@ -779,10 +779,10 @@ function Contact() {
                   id="type"
                   className="w-full rounded-xl border border-border/70 bg-background/60 px-4 py-3 text-sm outline-none transition-all focus:border-primary/60 focus:ring-2 focus:ring-primary/30"
                 >
-                  <option>Web corporativa</option>
-                  <option>Landing page</option>
-                  <option>Rediseño</option>
-                  <option>Mantenimiento</option>
+                  <option>Web con varias páginas</option>
+                  <option>Página única</option>
+                  <option>Renovar mi web actual</option>
+                  <option>Cambios en mi web</option>
                   <option>Otro</option>
                 </select>
               </div>
