@@ -33,7 +33,6 @@ import {
 import projRestaurant from "../assets/project-restaurant.jpg";
 import projGym from "../assets/project-gym.jpg";
 import projRealEstate from "../assets/project-realestate.jpg";
-import projBarber from "../assets/project-barber.jpg";
 import projSports from "../assets/project-sportsclub.jpg";
 
 export const Route = createFileRoute("/")({
@@ -369,13 +368,6 @@ const PROJECTS = [
     category: "Inmobiliaria",
     desc: "Catálogo de propiedades con buscador avanzado y contacto directo por WhatsApp.",
     tags: ["Next.js", "Buscador", "SEO"],
-  },
-  {
-    img: projBarber,
-    name: "Barbería Ejemplo",
-    category: "Barbería",
-    desc: "Web con reservas online, catálogo de servicios y estética industrial-moderna.",
-    tags: ["Reservas", "Diseño", "Móvil"],
   },
   {
     img: projSports,
