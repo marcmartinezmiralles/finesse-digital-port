@@ -590,7 +590,7 @@ function Process() {
 const FAQ = [
   {
     q: "¿Cuánto cuesta una web contigo?",
-    a: "Depende del alcance, pero la mayoría de mis proyectos se sitúan entre 100 € y 300 €. Trabajo con presupuesto cerrado: sabrás el precio final antes de empezar, sin sorpresas.",
+    a: "Depende del alcance, pero la mayoría de mis proyectos se sitúan entre 200 € y 500 € aprox. Trabajo con presupuesto cerrado: sabrás el precio final antes de empezar, sin sorpresas.",
   },
   {
     q: "¿En cuánto tiempo estará lista?",
