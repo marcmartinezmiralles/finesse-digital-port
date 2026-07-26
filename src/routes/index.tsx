@@ -678,60 +678,60 @@ function Contact() {
             <h2 className="font-display text-5xl leading-[1.02] tracking-tight text-gradient md:text-7xl">
               Hablemos de <span className="italic text-gradient-primary">tu proyecto</span>.
             </h2>
-            <p className="mt-6 max-w-lg text-lg text-muted-foreground">
+            <p className="mt-6 max-w-lg text-base text-muted-foreground md:text-lg">
               Cuéntame qué necesitas y te enviaré una propuesta clara en menos de 48 horas.
               Sin compromiso.
             </p>
 
-            <div className="mt-10 space-y-3">
+            <div className="mt-8 space-y-2.5 md:mt-10 md:space-y-3">
               <a
                 href="https://wa.me/34600293219"
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center justify-between gap-4 rounded-2xl border border-border/60 bg-surface/60 p-4 transition-all hover:border-primary/40 hover:bg-surface"
+                className="group flex items-center justify-between gap-3 rounded-2xl border border-border/60 bg-surface/60 p-3 transition-all hover:border-primary/40 hover:bg-surface md:gap-4 md:p-4"
               >
-                <div className="flex items-center gap-4">
-                  <div className="grid size-11 place-items-center rounded-xl bg-primary/15 text-primary">
-                    <MessageSquare className="size-5" strokeWidth={1.75} />
+                <div className="flex min-w-0 items-center gap-3 md:gap-4">
+                  <div className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary/15 text-primary md:size-11">
+                    <MessageSquare className="size-4 md:size-5" strokeWidth={1.75} />
                   </div>
-                  <div>
-                    <div className="text-sm font-semibold">WhatsApp</div>
-                    <div className="text-xs text-muted-foreground">Respuesta más rápida</div>
+                  <div className="min-w-0">
+                    <div className="truncate text-xs font-semibold md:text-sm">WhatsApp</div>
+                    <div className="truncate text-[11px] text-muted-foreground md:text-xs">Respuesta más rápida</div>
                   </div>
                 </div>
-                <ArrowUpRight className="size-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                <ArrowUpRight className="size-3.5 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 md:size-4" />
               </a>
               <a
                 href="mailto:marcmartinez511@gmail.com"
-                className="group flex items-center justify-between gap-4 rounded-2xl border border-border/60 bg-surface/60 p-4 transition-all hover:border-primary/40 hover:bg-surface"
+                className="group flex items-center justify-between gap-3 rounded-2xl border border-border/60 bg-surface/60 p-3 transition-all hover:border-primary/40 hover:bg-surface md:gap-4 md:p-4"
               >
-                <div className="flex items-center gap-4">
-                  <div className="grid size-11 place-items-center rounded-xl bg-primary/15 text-primary">
-                    <Mail className="size-5" strokeWidth={1.75} />
+                <div className="flex min-w-0 items-center gap-3 md:gap-4">
+                  <div className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary/15 text-primary md:size-11">
+                    <Mail className="size-4 md:size-5" strokeWidth={1.75} />
                   </div>
-                  <div>
-                    <div className="text-sm font-semibold">marcmartinez511@gmail.com</div>
-                    <div className="text-xs text-muted-foreground">Correo electrónico</div>
+                  <div className="min-w-0">
+                    <div className="truncate text-xs font-semibold md:text-sm">marcmartinez511@gmail.com</div>
+                    <div className="truncate text-[11px] text-muted-foreground md:text-xs">Correo electrónico</div>
                   </div>
                 </div>
-                <ArrowUpRight className="size-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                <ArrowUpRight className="size-3.5 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 md:size-4" />
               </a>
               <a
                 href="https://www.linkedin.com/in/marc-mart%C3%ADnez-miralles-9b83a3354/"
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center justify-between gap-4 rounded-2xl border border-border/60 bg-surface/60 p-4 transition-all hover:border-primary/40 hover:bg-surface"
+                className="group flex items-center justify-between gap-3 rounded-2xl border border-border/60 bg-surface/60 p-3 transition-all hover:border-primary/40 hover:bg-surface md:gap-4 md:p-4"
               >
-                <div className="flex items-center gap-4">
-                  <div className="grid size-11 place-items-center rounded-xl bg-primary/15 text-primary">
-                    <Linkedin className="size-5" strokeWidth={1.75} />
+                <div className="flex min-w-0 items-center gap-3 md:gap-4">
+                  <div className="grid size-9 shrink-0 place-items-center rounded-xl bg-primary/15 text-primary md:size-11">
+                    <Linkedin className="size-4 md:size-5" strokeWidth={1.75} />
                   </div>
-                  <div>
-                    <div className="text-sm font-semibold">LinkedIn</div>
-                    <div className="text-xs text-muted-foreground">Conéctame profesionalmente</div>
+                  <div className="min-w-0">
+                    <div className="truncate text-xs font-semibold md:text-sm">LinkedIn</div>
+                    <div className="truncate text-[11px] text-muted-foreground md:text-xs">Conéctame profesionalmente</div>
                   </div>
                 </div>
-                <ArrowUpRight className="size-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                <ArrowUpRight className="size-3.5 shrink-0 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 md:size-4" />
               </a>
             </div>
           </motion.div>
