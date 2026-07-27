@@ -54,11 +54,19 @@ export const Route = createFileRoute("/")({
           "Diseño web premium enfocado en velocidad, confianza y conversiones. Presupuesto sin compromiso.",
       },
       { property: "og:type", content: "website" },
+      // TODO: switch to an absolute URL (https://tudominio.com/og-image.jpg) once
+      // there's a real domain — WhatsApp/LinkedIn crawlers need an absolute URL
+      // to reliably fetch the preview image, a relative path is not guaranteed to work.
+      { property: "og:image", content: "/og-image.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Marc Martínez — Desarrollo web" },
       { name: "twitter:title", content: "Marc Martínez — Desarrollo web premium" },
       {
         name: "twitter:description",
         content: "Webs modernas, rápidas y optimizadas para convertir visitas en clientes.",
       },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
   }),
   component: Index,
